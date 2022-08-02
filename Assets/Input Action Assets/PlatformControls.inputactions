@@ -1,0 +1,60 @@
+{
+    "name": "PlatformControls",
+    "maps": [
+        {
+            "name": "Mouse",
+            "id": "1522eabd-c424-4a2d-ab8a-5afb6dbe1832",
+            "actions": [
+                {
+                    "name": "Input",
+                    "type": "PassThrough",
+                    "id": "b1fc556b-7b66-45ad-9d32-6f515976e6c2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "56f73173-36bc-4c98-aa80-243861e4477a",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Input",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Touch",
+            "id": "6d8352e3-5e02-4e72-9d13-92923b8a0bab",
+            "actions": [
+                {
+                    "name": "Input",
+                    "type": "PassThrough",
+                    "id": "d409ba71-4ce1-4ee3-8fb0-965447a865df",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e0edfb86-6322-40c6-b495-2c87358f7e05",
+                    "path": "<Touchscreen>/primaryTouch/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Input",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
