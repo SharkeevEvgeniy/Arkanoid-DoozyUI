@@ -1,11 +1,10 @@
 using System.Collections;
 using UnityEngine;
-using Arkanoid.Level.Session;
 using Arkanoid.Common;
 
 namespace Arkanoid.Level
 {
-    public abstract class BallBase : MonoBehaviour
+    public abstract class BallBase : MonoBehaviour, IPauseHandler
     {
         [SerializeField] protected UserPrefs userPrefs;
         [SerializeField] protected Session.Session session;
@@ -21,6 +20,8 @@ namespace Arkanoid.Level
 
         private SpriteRenderer spriteRenderer = null;
         private TrailRenderer trailRenderer = null;
+
+        protected bool isPause;
 
         private void Awake()
         {
@@ -72,6 +73,16 @@ namespace Arkanoid.Level
             trailRenderer.emitting = true;
 
             session.SwitchPause(false);
+        }
+
+        public void Continue()
+        {
+            isPause = false;
+        }
+
+        public void Pause()
+        {
+            isPause = true;
         }
     }
 }

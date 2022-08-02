@@ -3,11 +3,9 @@ using Arkanoid.Tools;
 
 namespace Arkanoid.Level
 {
-    public class Ball : BallBase, IPauseHandler
+    public class Ball : BallBase
     {
         private VibratorWrapper vibratorWrapper = null;
-
-        private bool isPause;
 
         private void Start() => Initialize();
 
@@ -45,16 +43,6 @@ namespace Arkanoid.Level
                     session.Lose();
                 }
             }
-        }
-
-        public void Continue()
-        {
-            isPause = false;
-        }
-
-        public void Pause()
-        {
-            isPause = true;
         }
     }
 }
