@@ -81,7 +81,7 @@ SpriteAtlas:
   - VibrationOn
   - VibrationOff
   - PlayButton
-  - back
+  - Background
   - LevelCurrent
   - Level
   - BackButton

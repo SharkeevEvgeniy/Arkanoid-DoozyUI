@@ -968,11 +968,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47be40745fc91e4bb13c9000a2803b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelConfig: {fileID: 11400000, guid: 8d28632b89b14a5409351573b064db5e, type: 2}
-  ball: {fileID: 642626209}
-  platform: {fileID: 984641669}
-  startPositionBall: {fileID: 1647536344}
+  levelConfig: {fileID: 11400000, guid: 5125a29534549914c823b9d99b7f6f1b, type: 2}
   ballCountText: {fileID: 1779292136}
+  ball: {fileID: 642626209}
+  ballStartPosition: {fileID: 0}
   textMessage: {fileID: 338349984}
   userPrefs: {fileID: 1537035799}
 --- !u!4 &344776791
@@ -2396,7 +2395,7 @@ MonoBehaviour:
   inputHandler: {fileID: 2110743661}
   clampRange: 2.2
   session: {fileID: 344776790}
-  yPosition: -3.1
+  startYPos: -3.1
 --- !u!1 &998934682
 GameObject:
   m_ObjectHideFlags: 0
