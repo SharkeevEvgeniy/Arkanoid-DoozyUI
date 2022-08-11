@@ -1,6 +1,5 @@
 using UnityEngine;
 using Arkanoid.Level.Input;
-using Arkanoid.Level.Session;
 
 namespace Arkanoid.Level
 {
@@ -14,7 +13,9 @@ namespace Arkanoid.Level
 
         protected bool isPause;
 
-        private void Awake()
+        private void Awake() => Initialization();
+
+        private void Initialization()
         {
             session.AddPauseHandler(this);
         }

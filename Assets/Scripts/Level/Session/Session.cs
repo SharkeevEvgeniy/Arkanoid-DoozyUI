@@ -10,9 +10,13 @@ namespace Arkanoid.Level.Session
     {
         [SerializeField] private LevelConfig levelConfig;
 
-        [SerializeField] private TextMeshProUGUI ballCountText;
         [SerializeField] private BallBase ball;
         [SerializeField] private Transform ballStartPosition;
+        [SerializeField] private TextMeshProUGUI ballCountText;
+        [SerializeField] private TextMeshProUGUI textMessage;
+
+        [SerializeField] private UserPrefs userPrefs;
+
         private Transform ballTransform = null;
         private int ballCount;
 
@@ -24,10 +28,6 @@ namespace Arkanoid.Level.Session
         private SceneLoader sceneLoader = null;
 
         private int blockCount;
-
-        [SerializeField] private TextMeshProUGUI textMessage;
-
-        [SerializeField] private UserPrefs userPrefs;
 
         private void Awake()
         {
@@ -59,10 +59,7 @@ namespace Arkanoid.Level.Session
                 .Build();
         }
 
-        public void AddPauseHandler(IPauseHandler pauseHandler)
-        {
-            pauseHandlers.Add(pauseHandler);
-        }
+        public void AddPauseHandler(IPauseHandler pauseHandler) => pauseHandlers.Add(pauseHandler);
 
         public void Lose()
         {
@@ -139,9 +136,6 @@ namespace Arkanoid.Level.Session
             }
         }
 
-        public void TransitionHandle()
-        {
-            sceneLoader.AllowLoadScene();
-        }
+        public void TransitionHandle() => sceneLoader.AllowLoadScene();
     }
 }

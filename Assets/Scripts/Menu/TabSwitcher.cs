@@ -35,9 +35,6 @@ namespace Arkanoid.Menu
             }
         }
 
-        public void TransitionHandle()
-        {
-            EnableTab(currentTab);
-        }
+        public void TransitionHandle() => EnableTab(currentTab);
     }
 }

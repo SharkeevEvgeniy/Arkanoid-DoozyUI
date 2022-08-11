@@ -6,6 +6,8 @@ namespace Arkanoid.Level
 {
     public abstract class BallBase : MonoBehaviour, IPauseHandler
     {
+        private const int blinkCount = 3;
+
         [SerializeField] protected UserPrefs userPrefs;
         [SerializeField] protected Session.Session session;
 
@@ -62,7 +64,7 @@ namespace Arkanoid.Level
         {
             trailRenderer.emitting = false;
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < blinkCount; i++)
             {
                 spriteRenderer.enabled = false;
                 yield return new WaitForSeconds(0.5f);
@@ -75,14 +77,8 @@ namespace Arkanoid.Level
             session.SwitchPause(false);
         }
 
-        public void Continue()
-        {
-            isPause = false;
-        }
+        public void Continue() => isPause = false;
 
-        public void Pause()
-        {
-            isPause = true;
-        }
+        public void Pause() => isPause = true;
     }
 }

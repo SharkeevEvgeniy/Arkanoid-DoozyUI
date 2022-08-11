@@ -26,9 +26,6 @@ namespace Arkanoid.Level.Session
             return this;
         }
 
-        public SessionInfo Build()
-        {
-            return this;
-        }
+        public SessionInfo Build() => this;
     }
 }

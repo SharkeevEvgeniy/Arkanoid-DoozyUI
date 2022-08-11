@@ -5,9 +5,9 @@ namespace Arkanoid.Level.Input
 {
     public class InputHandler : MonoBehaviour
     {
-        public Action<Vector2> OnPositionChangedEvent;
+        public Action<Vector2> OnPositionChangedEvent { get; set; }
 
-        public PlatformControls playerInput;
+        [SerializeField] private PlatformControls playerInput;
 
         private void Awake()
         {

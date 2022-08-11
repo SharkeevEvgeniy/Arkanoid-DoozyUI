@@ -8,7 +8,7 @@ namespace Arkanoid.Common
         private bool useSound;
         private bool useVibration;
 
-        void Start() => Initialize();
+        private void Start() => Initialize();
 
         private void Initialize()
         {

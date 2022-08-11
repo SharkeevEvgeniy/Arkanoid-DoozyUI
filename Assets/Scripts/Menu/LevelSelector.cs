@@ -20,10 +20,7 @@ namespace Arkanoid.Menu
 
         private void OnEnable() => ShowCurrentLevel();
 
-        private void ShowCurrentLevel()
-        {
-            levelImages[userPrefs.GetCurrentLevel() - 1].sprite = currentLevelSprite;
-        }
+        private void ShowCurrentLevel() => levelImages[userPrefs.GetCurrentLevel() - 1].sprite = currentLevelSprite;
 
         public void SelectLevel(int index)
         {
@@ -45,9 +42,6 @@ namespace Arkanoid.Menu
             sceneLoader.LoadScene(selectedLevel);
         }
 
-        public void TransitionHandle()
-        {
-            sceneLoader.AllowLoadScene();
-        }
+        public void TransitionHandle() => sceneLoader.AllowLoadScene();
     }
 }

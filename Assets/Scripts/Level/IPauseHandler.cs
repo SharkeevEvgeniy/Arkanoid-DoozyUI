@@ -1,5 +1,8 @@
-public interface IPauseHandler
+namespace Arkanoid.Level
 {
-    void Continue();
-    void Pause();
+    public interface IPauseHandler
+    {
+        void Continue();
+        void Pause();
+    }
 }
